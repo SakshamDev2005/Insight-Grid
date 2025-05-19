@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; 
+    margin: 0; 
+    background-color: #F9FAFB; }
+
+h1 {
+    margin: 45px 0;
+}
+
+nav > ul > li {
+    margin: 0 20px;
+    font-size: 35px;
+}

@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Privacy Policy</title>
+        <link rel="icon" href="{% static 'core/media/fav2.png' %}" type="image/png">
+        <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <nav>
+            <a href="{% url 'home' %}" class="text-blue-600"><i class="fas fa-arrow-left" style="font-size: 50px; margin: 15px;"></i></a>
+        </nav>
+
+        <h1 class="text-6xl font-bold mb-4 text-center">Terms of Use</h1>
+
+        <p class="mb-4 text-4xl text-center">
+        Welcome to our educational platform. By accessing or using this website, you agree to the following terms and conditions. If you do not agree, please do not use the site.
+        </p>
+
+        <div style="padding: 10px 15px;">
+            <h2 class="text-3xl font-semibold mt-4">1. Educational Purpose Only</h2>
+            <p class="mb-4 text-2xl">
+            This website is intended solely for educational and informational purposes. The tools, tutorials, and examples provided here are designed to help users learn about data visualization, programming, and working with CSV files.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-4">2. No Warranty</h2>
+            <p class="mb-4 text-2xl">
+            All content is provided "as is" without any guarantees of accuracy, reliability, or results. While we strive to keep the content up to date, we do not warrant that the information will always be current or error-free.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-4">3. Acceptable Use</h2>
+            <p class="mb-4 text-2xl">
+            Users are expected to use the site responsibly and lawfully. Any misuse, including uploading malicious files, attempting to disrupt services, or reverse-engineering the platform, is strictly prohibited.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-4">4. Intellectual Property</h2>
+            <p class="mb-4 text-2xl">
+            Unless otherwise stated, all content including code samples, tools, and tutorials are the intellectual property of the site owner or contributors and may not be reproduced without permission.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-4">5. Changes to Terms</h2>
+            <p class="mb-4 text-2xl">
+            We reserve the right to update these terms at any time. Continued use of the site after changes are posted implies acceptance of the new terms.
+            </p>
+
+        </div>
+
+    </body>
+</html>
