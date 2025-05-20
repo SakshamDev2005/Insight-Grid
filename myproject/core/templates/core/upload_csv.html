@@ -26,6 +26,22 @@
 
     </style>
 
+    <script>
+        window.addEventListener('beforeunload', function(event) {
+            // Send AJAX request to Django to clear the session when the tab is closed
+            fetch("{% url 'clear_session' %}", {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }).then(response => {
+                console.log('Session cleared.');
+            }).catch(error => {
+                console.log('Error clearing session:', error);
+            });
+        });
+    </script>
+
 </head>
 <body>
 

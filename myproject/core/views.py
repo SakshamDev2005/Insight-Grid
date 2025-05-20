@@ -6,6 +6,9 @@ import pandas as pd
 from .models import read_csv_file
 from.models import generate_plot as gp
 import pandas as pd
+from django.http import JsonResponse
+from django.contrib.sessions.models import Session
+from django.utils import timezone
 
 
 var1 = "https://github.com/SakshamDev2005"
@@ -32,9 +35,13 @@ def privacy(request):
 
 
 def home(request):
+
     if request.method == 'POST':
         uploaded_file = request.FILES.get('file')
         file_name = uploaded_file.name if uploaded_file else "CSV file"
+
+        # Clear previous plot image to ensure it doesn't persist across requests
+        request.session.pop('plot_image', None)
 
         if uploaded_file and uploaded_file.name.endswith('.csv'):
             try:
@@ -58,6 +65,7 @@ def home(request):
     return render(request, 'core/home.html')
 
 def upload_csv(request):
+
     table_data = request.session.get('table_data')
     file_name = request.session.get('file_name')
     plot_image = request.session.get('plot_image')
@@ -74,6 +82,7 @@ def upload_csv(request):
                                                         'file_name': file_name, 
                                                         'plot_image': plot_image,
                                                         'Github':var1,'Instagram':var2,'Linkedin':var3})
+
     except Exception as e:
         from django.contrib import messages
         messages.error(request, f'Error: {str(e)}')
@@ -88,6 +97,7 @@ def generate_plot(request):
         if not x_axis or not y_axis or not plot_type:
             from django.contrib import messages
             messages.error(request, 'Please select x-axis, y-axis, and plot type.')
+            request.session.pop('plot_image', None)
             return redirect('upload_csv')
         
         try:
@@ -101,9 +111,20 @@ def generate_plot(request):
            
             plot_image = gp(table_data,plot_type, x_axis, y_axis)
             request.session['plot_image'] = plot_image
+
             return redirect('upload_csv')
         
         except Exception as e:
             from django.contrib import messages
             messages.error(request, f'Error: {str(e)}')
             return redirect('home')
+        
+def clear_session(request):
+    """
+    Clears the session data for the current user.
+    """
+    # Clear session data
+    request.session.clear()
+
+    # Optional: Save a response (success) to send back to JavaScript
+    return JsonResponse({'status': 'success'}, status=200)

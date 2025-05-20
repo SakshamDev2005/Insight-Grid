@@ -27,6 +27,7 @@ def read_csv_file(uploaded_file):
         raise Exception(f"Failed to process CSV file: {e}")
     
 def generate_plot(table_data, plot_type, x_axis, y_axis):
+
     try:
         # Create figure and axis
         fig, ax = plt.subplots()
