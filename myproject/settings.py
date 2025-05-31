@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-3cth0e4aiq139$p2$elaiyx6s!$gx*=7fyt6#k2j9c=673xz1w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [https://insightgrid.onrender.com/]
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
