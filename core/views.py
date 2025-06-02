@@ -119,12 +119,3 @@ def generate_plot(request):
             messages.error(request, f'Error: {str(e)}')
             return redirect('home')
         
-def clear_session(request):
-    """
-    Clears the session data for the current user.
-    """
-    # Clear session data
-    request.session.clear()
-
-    # Optional: Save a response (success) to send back to JavaScript
-    return JsonResponse({'status': 'success'}, status=200)
