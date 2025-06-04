@@ -38,6 +38,8 @@ Whether you want to create bar charts, line graphs, or pie charts, InsightGrid h
 - pip
 - virtualenv (optional but recommended)
 
+---
+
 ### Installation
 
 ```bash
@@ -46,3 +48,14 @@ cd InsightGrid
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+```
+---
+
+### ⚠️ Note
+
+> **InsightGrid is currently a working prototype** developed for educational and demonstration purposes.  
+> While it offers basic CSV upload and chart generation features (bar, line, and pie charts), it is **not yet a full-scale, production-grade visualization platform**.
+
+> Future improvements may include advanced chart types, data cleaning, filtering, dashboard exports, and user authentication.
+
+---
