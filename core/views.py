@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 import pandas as pd
 from .models import read_csv_file
-from.models import generate_plot as gp
+from .models import generate_plot as gp
 import pandas as pd
 from django.http import JsonResponse
 from django.contrib.sessions.models import Session
