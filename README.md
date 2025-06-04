@@ -1,5 +1,7 @@
 # Insight Grid
 
+🚀 **Live Demo:** [Click here to open the site](https://insightgrid.onrender.com)
+
 **InsightGrid** is a modern, intuitive data analytics platform that helps you transform CSV files into powerful, interactive visualizations — without writing a single line of code.
 
 ## 🚀 What is InsightGrid?
@@ -17,15 +19,6 @@ Whether you want to create bar charts, line graphs, or pie charts, InsightGrid h
 - 📈 **Auto-generated Plots** – Instantly preview plots based on selected fields.
 - 🧩 **No Coding Needed** – Full functionality with an easy-to-use web interface.
 - 🔒 **Session-Aware Design** – Automatically clears sessions on exit for security.
-
----
-
-## 📷 Screenshots
-
-![Homepage](https://your-screenshot-link.com/homepage.png)  
-![Upload Interface](https://your-screenshot-link.com/upload.png)  
-![Generated Plot](https://your-screenshot-link.com/plot.png)  
-*(Replace with actual links or local image paths if needed)*
 
 ---
 
@@ -48,7 +41,7 @@ Whether you want to create bar charts, line graphs, or pie charts, InsightGrid h
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/InsightGrid.git
+git clone https://github.com/SakshamDev2005/InsightGrid.git
 cd InsightGrid
 pip install -r requirements.txt
 python manage.py migrate
