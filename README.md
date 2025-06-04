@@ -1,6 +1,6 @@
 # Insight Grid
 
-🚀 **Live Demo:** [Click here to open the site](https://insightgrid.onrender.com)
+🚀 **Live Demo:** [Click here to open the site](https://insightgrid.onrender.com/)
 
 **InsightGrid** is a modern, intuitive data analytics platform that helps you transform CSV files into powerful, interactive visualizations — without writing a single line of code.
 
