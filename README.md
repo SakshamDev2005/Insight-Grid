@@ -1,1 +1,2 @@
-# insight-grid
+# Insight Grid
+
