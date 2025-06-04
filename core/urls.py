@@ -9,5 +9,4 @@ urlpatterns = [
     path('terms/', views.terms, name='terms'), # Terms of service page
     path('privacy/', views.privacy, name='privacy'), # Privacy policy page
     path('generate_plot/', views.generate_plot, name='generate_plot'), # Generate plot page
-    path('clear-session/', views.clear_session, name='clear_session'), # Clear session data
 ]
